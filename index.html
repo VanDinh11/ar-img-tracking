@@ -43,8 +43,8 @@
   <div class="arjs-loader">
     <div>Loading, please wait...</div>
   </div>
-  <a-scene vr-mode-ui="enabled: false;" renderer="logarithmicDepthBuffer: true;" embedded
-    arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
+  <a-scene vr-mode-ui="enabled: false;" renderer="logarithmicDepthBuffer: true; antialias: true; alpha: true; precision: medium;" embedded stats
+    arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false; patternRatio: 0.75; maxDetectionRate: 60;  detectionMode: mono">
     <a-assets>
       <video id="myvideo" autoplay loop="true" src="./set1/file_example_MP4_480_1_5MG.mp4" webkit-playsinline playsinline
         preload="auto" crossorigin></video>
@@ -56,8 +56,8 @@
     <a-nft type="nft" 
           url="https://vandinh11.github.io/ar-img-tracking/set2/girl-marker" 
           smooth="true" 
-          smoothCount="10" 
-          smoothTolerance=".01"
+          smoothCount="0" 
+          smoothTolerance="0.0001"
           smoothThreshold="5">
       <!-- <a-video src="#myvideo" position="50 150 0"></a-video> -->
       <a-entity
@@ -68,7 +68,7 @@
       >
     </a-nft>
     <!-- static camera that moves according to the device movemenents -->
-    <a-entity camera></a-entity>
+    <a-entity camera look-controls></a-entity>
   </a-scene>
   <script>
     // Workaround for an AR.js bug (https://github.com/jeromeetienne/AR.js/issues/410)
