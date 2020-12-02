@@ -56,20 +56,21 @@
     <a-nft type="nft" 
           url="https://vandinh11.github.io/ar-img-tracking/set2/girl-marker" 
           smooth="true" 
-          smoothCount="100" 
-          smoothTolerance="0.8"
+          smoothCount="15" 
+          smoothTolerance="0.5"
           smoothThreshold="10"
           >
       <!-- <a-video src="#myvideo" position="50 150 0"></a-video> -->
       <a-entity
         gltf-model="#modelid"
         scale="0.5 0.5 0.5"
-        position="50 130 0"
+        position="0 0 0"
         rotation="-90 0 0"
       >
     </a-nft>
     <!-- static camera that moves according to the device movemenents -->
-    <a-entity camera look-controls></a-entity>
+    <!-- orbit-controls="target: 0 1.6 -0.5; minDistance: 0.5; maxDistance: 180; initialPosition: 0 5 15"; -->
+    <a-entity camera orbit-controls="target: 0 1.6 -0.5; minDistance: 0.5; maxDistance: 180; initialPosition: 0 5 15";></a-entity>
   </a-scene>
   <script>
     // Workaround for an AR.js bug (https://github.com/jeromeetienne/AR.js/issues/410)
