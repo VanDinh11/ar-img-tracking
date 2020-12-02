@@ -48,6 +48,9 @@
     <a-assets>
       <video id="myvideo" autoplay loop="true" src="./set1/file_example_MP4_480_1_5MG.mp4" webkit-playsinline playsinline
         preload="auto" crossorigin></video>
+        <a-asset-item id="modelid"
+        src="https://raw.githubusercontent.com/VanDinh11/public-models/master/zelda_breath_of_the_wild/scene.gltf">
+    </a-asset-item>
     </a-assets>
     <!-- https://arjs-cors-proxy.herokuapp.com/https://github.com/VanDinh11/ar-img-tracking/tree/master/set1/img-marker -->
     <a-nft type="nft" 
@@ -56,12 +59,12 @@
           smoothCount="10" 
           smoothTolerance=".01"
           smoothThreshold="5">
-      <a-video src="#myvideo" position="50 150 0"></a-video>
-      <!-- <a-entity
-        gltf-model="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf"
-        scale="5 5 5"
+      <!-- <a-video src="#myvideo" position="50 150 0"></a-video> -->
+      <a-entity
+        gltf-model="#modelid"
+        scale="1 1 1"
         position="50 150 0"
-      > -->
+      >
     </a-nft>
     <!-- static camera that moves according to the device movemenents -->
     <a-entity camera></a-entity>
